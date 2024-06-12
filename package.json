@@ -1,0 +1,23 @@
+{
+  "name": "card-form",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:host": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/cleave.js": "^1.4.12",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "card-validator-es6": "^8.1.7",
+    "cleave.js": "^1.6.0",
+    "redom": "^4.0.0"
+  }
+}
