@@ -30,7 +30,7 @@ export function handleBlur(e: FocusEvent) {
         validationFormFieldsStatus.set(target.parentElement as RedomElement, true);
     }
     else {
-        target.classList.add('invalid');
+        target.classList.add('invalid', 'is-invalid');
         submitBtn.disabled = true;
         validationFormFieldsStatus.set(target.parentElement as RedomElement, false);
     }
@@ -43,7 +43,7 @@ export function handleBlur(e: FocusEvent) {
 export function handleInput(e: InputEvent) {
   const currentInput = e.target as HTMLInputElement;
   const submitBtn = document.getElementById('SubmitBtn') as HTMLButtonElement;
-  currentInput.classList.remove('invalid');
+  currentInput.classList.remove('invalid', 'is-invalid');
   submitBtn.disabled = true;
 
   const payIcon = document.getElementById('payIcon') as HTMLImageElement

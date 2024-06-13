@@ -6,12 +6,11 @@ import { handleBlur, handleInput, setInputMask } from './utils';
 const validationFormFieldsStatus = new Map<RedomElement, boolean>();
 
 function createForm() {
-    const container = el('div', { className: 'container d-flex justify-content-center p-5' });
-    const formWrap = el('div', { className: 'd-flex flex-column border rounded p-5 bg-light-subtle' });
+    const container = el('div', { className: 'container d-flex justify-content-center py-5' });
+    const formWrap = el('div', { className: 'd-flex flex-column border rounded gap-3 p-3 bg-light-subtle' });
     const form = el('form', { className: 'd-flex gap-3 row' });
     const payIcon = el('img', {
         src: `/unknown_system.png?url`,
-        style: 'height:70px; ',
         className: 'align-self-end',
         id: 'payIcon',
     });
@@ -41,10 +40,12 @@ function createInput(input: inputItem): RedomElement {
     const $wrap = el('div', { className: `d-flex flex-column gap-1 ${input.col}` });
     const $input = el('input', { className: `border rounded p-3`, oninput: handleInput, onblur: handleBlur });
     const $label = el('label', { className: 'form-label' });
+    const $error =  el('span', { className: 'invalid-feedback' });    
 
     $input.name = input.name;
     $label.textContent = input.text;
-    $wrap.append($label, $input);
+    $error.textContent = input.error;
+    $wrap.append($label, $input, $error);
 
     setInputMask($input);
 

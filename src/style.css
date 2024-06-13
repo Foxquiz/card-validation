@@ -20,3 +20,13 @@ input:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#payIcon {
+  height: 40px;
+}
+
+@media(min-width: 576px) {
+  #payIcon {
+    height: 70px;
+  }
+}
