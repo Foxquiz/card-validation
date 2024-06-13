@@ -20,3 +20,9 @@
 
 <h3>В работе используются:</h3>
 <strong>Typescript, Vite, Credit Card Validator, Cleave.js, Redom, Bootstrap</strong>
+
+### Запуск режима разработки
+
+```sh
+npm run dev
+```
