@@ -3,4 +3,5 @@ export type inputItem = {
     type: string,
     text: string,
     col: string,
+    error: string,
 };
