@@ -10,7 +10,7 @@ function createForm() {
     const formWrap = el('div', { className: 'd-flex flex-column border rounded p-5 bg-light-subtle' });
     const form = el('form', { className: 'd-flex gap-3 row' });
     const payIcon = el('img', {
-        src: `/unknown_system.png`,
+        src: `/unknown_system.png?url`,
         style: 'height:70px; ',
         className: 'align-self-end',
         id: 'payIcon',
